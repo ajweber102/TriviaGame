@@ -1,4 +1,4 @@
-var count=21;
+var count=31;
 
 var counter=setInterval(timer, 1000);
 
@@ -25,14 +25,14 @@ function timer() {
 
 setTimeout(function() {
     $('#ex1').modal('show');
-}, 21000); // milliseconds
+}, 31000); // milliseconds
 
 
 // Click function for Correct Answers
 
 $(".correct").on("click", function() {
     $(this).css({color:'green'},{weight:'bold'});
-    $(".score").text((score ++ ) + " is your score"); {
+    $(".score").text((score ++ ) + " out of 4 is your score."); {
         counter = 0;
         console.log(score + counter + "test")
     }
@@ -42,7 +42,7 @@ $(".correct").on("click", function() {
 
 $(".incorrect").on("click", function() {
     $(this).css({color:'red'},{weight:'bold'});
-    $(".wrong").text((incorrect ++ ) + " wrong answers"); {
+    $(".wrong").text((incorrect ++ ) + " wrong answers."); {
         counter = 0;
         console.log(incorrect + counter + "test")
     }
