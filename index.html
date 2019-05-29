@@ -4,65 +4,165 @@
 <head>
   <meta charset="utf-8">
   <title>Trivia Game</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="assets/javascript/app.js"></script>
-  <script type="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  
+  
 </head>
 
 <body>
     <header>
-        <div>
-            Photography Trivia Game!
+        <div class = "row">
+            <div class="col-lg">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Photography Quiz!</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container row-sm-12">
+            <h4 class="text-lg-left col-md-4">
+                <span class="score"></span>
+            </h4>
+            <h4 class="text-lg-left col-md-4">
+                <span class="wrong"></span>
+            </h4>
+            <h4 class="text-lg-left col-md-4">
+                <div class="timer"></div>
+            </h4>
         </div>
     </header>
-    <section>
-        <div id="time-left"></div>
+    <section class = "container container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <div>
+                    <section>
+                        <div id="timer"></div>
+                        <div id="score"></div>
+                    </section>
+                    <section style="margin:4rem;">
+                        <div>
+                            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
+                        </div>
+                        <div class="form-group">
+                            <div class="incorrect">
+                                <input type="radio" name="question1" id="incorrect"></input>
+                                <span id="incorrect">Mary Ellen Mark</span>
+                            </div>
+                            <div class="correct">
+                                <input type="radio" name="question1" id="correct"></input>
+                                <span id="correct">Dorthea Lange</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question1" id="incorrect"></input>
+                                <span id="incorrect">Walker Evans</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question1" id="incorrect"></input>
+                                <span id="incorrect">Man Ray</span>
+                            </div>
+                        </div>
+                        <div>
+                            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
+                        </div>
+                        <div class="form-group">
+                            <div class="incorrect">
+                                <input type="radio" name="question2" id="incorrect"></input>
+                                <span id="incorrect">Mary Ellen Mark</span>
+                            </div>
+                            <div class="correct">
+                                <input type="radio" name="question2" id="correct"></input>
+                                <span id="correct">Dorthea Lange</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question2" id="incorrect"></input>
+                                <span id="incorrect">Walker Evans</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question2" id="incorrect"></input>
+                                <span id="incorrect">Man Ray</span>
+                            </div>
+                        </div>
+                        <div>
+                            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
+                        </div>
+                        <div class="form-group">
+                            <div class="incorrect">
+                                <input type="radio" name="question3" id="incorrect"></input>
+                                <span id="incorrect">Mary Ellen Mark</span>
+                            </div>
+                            <div class="correct">
+                                <input type="radio" name="question3" id="correct"></input>
+                                <span id="correct">Dorthea Lange</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question3" id="incorrect"></input>
+                                <span id="incorrect">Walker Evans</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question3"></input>
+                                <span id="incorrect">Man Ray</span>
+                            </div>
+                        </div>
+                        <div>
+                            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
+                        </div>
+                        <div class="form-group">
+                            <div class="incorrect">
+                                <input type="radio" name="question4"></input>
+                                <span id="incorrect">Mary Ellen Mark</span>
+                            </div>
+                            <div class="correct">
+                                <input type="radio" name="question4"></input>
+                                <span id="correct">Dorthea Lange</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question4"></input>
+                                <span id="incorrect">Walker Evans</span>
+                            </div>
+                            <div class="incorrect">
+                                <input type="radio" name="question4"></input>
+                                <span id="incorrect">Man Ray</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
     </section>
     <section>
-        <div>
-            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
-        </div>
-        <div>
-            <input type="radio" name="question1" id="incorrect">Mary Ellen Mark</input>
-            <input type="radio" name="question1" id="correct">Dorthea Lange</input>
-            <input type="radio" name="question1" id="incorrect">Walker Evans</input>
-            <input type="radio" name="question1" id="incorrect">Man Ray</input>
+        <div id="ex1" class="modal">
+            <div class="container row-sm-12">
+                <h3 class="text-lg-left col-md-12">
+                    Your results:
+                </h3>
+                <h4 class="text-lg-left col-md-12">
+                    <span class="score"></span>
+                </h4>
+                <h4 class="text-lg-left col-md-12">
+                    <span class="wrong"></span>
+                </h4>
+                <div class="text-md-left col-md-4">
+                    <a href="#ex1" rel="reload" class="btn btn-light">Try Again</a>
+                </div>
+            </div>
         </div>
     </section>
+    
+    <!-- Link to open the modal -->
     <section>
-        <div>
-            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
-        </div>
-        <div>
-            <input type="radio" name="question2" id="incorrect">Mary Ellen Mark</input>
-            <input type="radio" name="question2" id="incorrect">Dorthea Lange</input>
-            <input type="radio" name="question2" id="incorrect">Walker Evans</input>
-            <input type="radio" name="question2" id="correct">Man Ray</input>
+        <div class="container row-sm-12">
+            <div class="text-md-left col-md-4">
+                <a href="#ex1" rel="modal:open" class="btn btn-dark">Submit</a>
+            </div>
         </div>
     </section>
-    <section>
-        <div>
-            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
-        </div>
-        <div>
-            <input type="radio" name="question3" id="correct">Mary Ellen Mark</input>
-            <input type="radio" name="question3" id="incorrect">Dorthea Lange</input>
-            <input type="radio" name="question3" id="incorrect">Walker Evans</input>
-            <input type="radio" name="question3" id="incorrect">Man Ray</input>
-        </div>
-    </section>
-    <section>
-        <div>
-            Which photographer famously photographed "Migrant Mother" during the Dust Bowl?
-        </div>
-        <div>
-            <input type="radio" name="option 1" id="incorrect">Mary Ellen Mark</input>
-            <input type="radio" name="option 1" id="incorrect">Dorthea Lange</input>
-            <input type="radio" name="option 1" id="correct">Walker Evans</input>
-            <input type="radio" name="option 1" id="incorrect"> Man Ray</input>
-        </div>
-    </section>
+
 </body>
 
-<script type="text/javascript" src="assets/javascript/app.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/app.js"></script>
+
+</html>
